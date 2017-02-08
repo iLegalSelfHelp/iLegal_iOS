@@ -12,17 +12,27 @@ import SwiftyJSON
 
 class DocumentsViewController: UITableViewController {
     
+    // MARK: - Properties
+    
     var formList = [Form]()
     var filteredForms = [Form]()
+    var category = ""
     
     let searchController = UISearchController(searchResultsController: nil)
+    
+    // MARK: - Lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "formCell")
-        populateForms()
+        Backend.getItems(fromCategory: category) { forms in
+            if let forms = forms {
+                self.formList = forms
+                self.tableView.reloadData()
+            }
+        }
         
         //Set-Up searchController
         searchController.searchResultsUpdater = self
@@ -41,6 +51,8 @@ class DocumentsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Table view
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchController.isActive && searchController.searchBar.text != "" {
@@ -83,28 +95,6 @@ class DocumentsViewController: UITableViewController {
         tableView.reloadData()
     }
 
-    func populateForms()
-    {
-        Alamofire.request("http://159.203.67.188:8080/Dev/ListPDF?Type=2&Category=" + self.title!).responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let outcome = JSON(value)
-                var list = outcome["PDFS"].arrayObject
-                let pdfCount:Int = (list?.count)!
-                for i in 0...(pdfCount-1) {
-                    var current = list?[i] as! [String]
-                    let tempPDF:Form = Form()
-                    tempPDF.title = current[0]
-                    tempPDF.location = current[1]
-                    tempPDF.id = current[2]
-                    self.formList.append(tempPDF)
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
-
-    }
     /*
     // MARK: - Navigation
 

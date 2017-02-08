@@ -121,6 +121,70 @@
             </objects>
             <point key="canvasLocation" x="274.39999999999998" y="-447.52623688155927"/>
         </scene>
+        <!--Categories-->
+        <scene sceneID="Y2f-RY-nuO">
+            <objects>
+                <collectionViewController id="0e0-8w-43h" customClass="CategoriesViewController2" customModule="ilegal" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tae-Mf-fmt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VgH-Tk-mll">
+                            <size key="itemSize" width="116" height="153"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="vpg-cX-VDC" customClass="CategoryCell" customModule="ilegal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="116" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="116" height="153"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MRa-MX-ihv">
+                                            <rect key="frame" x="8" y="8" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="gnI-QG-jas"/>
+                                                <constraint firstAttribute="width" constant="100" id="t75-7q-gAm"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbk-YL-LNh">
+                                            <rect key="frame" x="8" y="116" width="100" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="MRa-MX-ihv" firstAttribute="top" secondItem="vpg-cX-VDC" secondAttribute="topMargin" id="OFF-hg-2e8"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="dbk-YL-LNh" secondAttribute="bottom" constant="8" id="Pcn-Ue-tT4"/>
+                                    <constraint firstItem="dbk-YL-LNh" firstAttribute="trailing" secondItem="vpg-cX-VDC" secondAttribute="trailingMargin" id="S3B-FS-tRJ"/>
+                                    <constraint firstItem="dbk-YL-LNh" firstAttribute="top" secondItem="MRa-MX-ihv" secondAttribute="bottom" constant="8" id="cqO-GZ-af2"/>
+                                    <constraint firstItem="MRa-MX-ihv" firstAttribute="leading" secondItem="vpg-cX-VDC" secondAttribute="leadingMargin" id="lth-mV-NxW"/>
+                                    <constraint firstItem="MRa-MX-ihv" firstAttribute="trailing" secondItem="vpg-cX-VDC" secondAttribute="trailingMargin" id="m5g-qG-D4L"/>
+                                    <constraint firstItem="dbk-YL-LNh" firstAttribute="leading" secondItem="vpg-cX-VDC" secondAttribute="leadingMargin" id="ojz-17-DbY"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="MRa-MX-ihv" id="3Uz-dA-WkO"/>
+                                    <outlet property="label" destination="dbk-YL-LNh" id="b9Q-jR-rnp"/>
+                                    <segue destination="nOE-Oy-7n0" kind="show" identifier="categorySegue" id="yNy-QN-IgY"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="0e0-8w-43h" id="A0G-5a-tbm"/>
+                            <outlet property="delegate" destination="0e0-8w-43h" id="FNz-ho-Q3i"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Categories" id="YDB-Fn-MYd"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ciJ-be-aFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721" y="477"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -1173,7 +1237,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="b7n-2r-RPU" kind="relationship" relationship="rootViewController" id="IAi-k5-o8L"/>
+                        <segue destination="0e0-8w-43h" kind="relationship" relationship="rootViewController" id="jTX-lx-gLR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Osh-3f-Gjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1226,6 +1290,7 @@
         <image name="mostviewed" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="yNy-QN-IgY"/>
         <segue reference="Csc-1X-Hxt"/>
         <segue reference="kjX-TD-juo"/>
     </inferredMetricsTieBreakers>

@@ -106,4 +106,27 @@ class Backend: NSObject {
         }
     }
     
+    static func getItems(fromCategory category: String, completion: @escaping (_ forms: [Form]?) -> Void) {
+        Alamofire.request("\(rootURL)/ListPDF?Type=2&Category=\(category)").responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let outcome = JSON(value)
+                var list = outcome["PDFS"].arrayObject
+                let pdfCount:Int = (list?.count)!
+                var formList = [Form]()
+                for i in 0...(pdfCount-1) {
+                    var current = list?[i] as! [String]
+                    let tempPDF:Form = Form()
+                    tempPDF.title = current[0]
+                    tempPDF.location = current[1]
+                    tempPDF.id = current[2]
+                    formList.append(tempPDF)
+                }
+                completion(formList)
+            case .failure:
+                completion(nil)
+            }
+        }
+    }
+    
 }
