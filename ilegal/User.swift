@@ -10,7 +10,9 @@ import UIKit
 
 open class User: NSObject {
     
-    static let currentUser = User()
+    // MARK: - Properties
+    
+    static var currentUser = User()
     var email:String!
     var password:String!
     var firstName:String!
@@ -27,6 +29,28 @@ open class User: NSObject {
     var DOB:String!
     var id:String!
     var myFiles = [Form]()
+    
+    var dictionaryValue: [String : Any] {
+        return [
+            "email": email,
+            "password": password,
+            "firstName": firstName,
+            "lastName": lastName,
+            "middleInitial": middleInitial ?? "",
+            "addressOne": addressOne,
+            "addressTwo": addressTwo,
+            "city": city,
+            "state": state,
+            "zipcode": zipcode,
+            "phone": phone,
+            "license": license,
+            "active": active,
+            "DOB": DOB,
+            "id": id
+        ]
+    }
+    
+    // MARK: - Initializers
     
     fileprivate override init() {
         email = ""
@@ -45,6 +69,26 @@ open class User: NSObject {
         active = false;
         id = ""
     }
+    
+    init(dictionary: [String : Any]) {
+        email = dictionary["email"] as! String
+        password = dictionary["email"] as! String
+        firstName = dictionary["firstName"] as! String
+        lastName = dictionary["lastName"] as! String
+        middleInitial = dictionary["middleInitial"] as? String
+        addressOne = dictionary["addressOne"] as! String
+        addressTwo = dictionary["addressTwo"] as! String
+        city = dictionary["city"] as! String
+        state = dictionary["state"] as! String
+        zipcode = dictionary["zipcode"] as! String
+        phone = dictionary["phone"] as! String
+        license = dictionary["license"] as! String
+        active = dictionary["active"] as! Bool
+        DOB = dictionary["DOB"] as! String
+        id = dictionary["id"] as! String
+    }
+    
+    // MARK: - Methods
     
     func setBirthday(_ month: String, day: String, year: String){
         self.DOB = year + "-" + month + "-" + day

@@ -1,30 +1,30 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AEFA0C9BEBE7CA90CA78D767285A05632D63190A",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "26EF18058C96A96751C4C67E12060A6E63AE55F9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53" : 9223372036854775807,
+    "26EF18058C96A96751C4C67E12060A6E63AE55F9" : 9223372036854775807,
     "AEFA0C9BEBE7CA90CA78D767285A05632D63190A" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "55DB9A42-AD41-4F0B-8CDF-BC7AC5064BB9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53" : "ilegal_ios\/ilegal\/CryptoSwift\/",
-    "AEFA0C9BEBE7CA90CA78D767285A05632D63190A" : "ilegal_ios\/"
+    "26EF18058C96A96751C4C67E12060A6E63AE55F9" : "ilegal\/",
+    "AEFA0C9BEBE7CA90CA78D767285A05632D63190A" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ilegal",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ilegal\/ilegal.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ilegal.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iLegalSelfHelp\/iLegal_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "26EF18058C96A96751C4C67E12060A6E63AE55F9"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/hoomz\/ilegal_ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AEFA0C9BEBE7CA90CA78D767285A05632D63190A"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/krzyzanowskim\/CryptoSwift.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C3D8ED1CB28D809ADCE2C0DE74935E8A502ACD53"
     }
   ]
 }

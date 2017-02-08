@@ -2,12 +2,13 @@
 # platform :ios, '9.0'
 
 target 'ilegal' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
 
-  # Pods for ilegal
-  pod 'SwiftyJSON'
-  pod 'Alamofire' , '~> 4.0'
-  pod 'CryptoSwift'
-  pod 'ILPDFKit'
+    # Pods for ilegal
+    pod 'SwiftyJSON'
+    pod 'Alamofire' , '~> 4.0'
+    pod 'CryptoSwift'
+    pod 'ILPDFKit'
+    pod 'SnapKit'
 end

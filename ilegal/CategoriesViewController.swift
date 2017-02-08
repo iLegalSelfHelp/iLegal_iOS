@@ -26,13 +26,10 @@ class CategoriesViewController: UITableViewController {
         // Do any additional setup after loading the view.
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "categoriesCell")
         
-        Alamofire.request("http://159.203.67.188:8080/Dev/ListPDF?Type=1").responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let outcome = JSON(value)
-                self.categoriesList = outcome["Categories"].arrayObject as! [String]
-            case .failure(let error):
-                print(error)
+        Backend.getCategories { categories in
+            if let categories = categories {
+                self.categoriesList = categories
+                self.tableView.reloadData()
             }
         }
         
@@ -43,11 +40,6 @@ class CategoriesViewController: UITableViewController {
         tableView.tableHeaderView = searchController.searchBar
         
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
