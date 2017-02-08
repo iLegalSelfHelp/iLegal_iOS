@@ -50,9 +50,13 @@ open class User: NSObject {
         ]
     }
     
+    var fullName: String {
+        return "\(firstName) \(lastName)"
+    }
+    
     // MARK: - Initializers
     
-    fileprivate override init() {
+    override init() {
         email = ""
         password = ""
         firstName = ""

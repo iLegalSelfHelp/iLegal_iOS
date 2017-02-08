@@ -69,6 +69,12 @@ class Backend: NSObject {
         UserDefaults.standard.synchronize()
     }
     
+    static func clearUserLocal() {
+        User.currentUser = User()
+        UserDefaults.standard.set(nil, forKey: "user")
+        UserDefaults.standard.synchronize()
+    }
+    
     static func getSavedFiles(completion: ((_ error: String?) -> Void)? = nil) {
         Alamofire.request("\(rootURL)/ListPDF?Type=4&UserUniqueID=\(User.currentUser.id)").responseJSON { response in
             switch response.result {
