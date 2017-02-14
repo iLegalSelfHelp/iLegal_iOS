@@ -12,9 +12,18 @@ import SwiftyJSON
 
 class Backend: NSObject {
     
+    // MARK: - Inner definitions
+    
+    private enum ServerError: Int {
+        case noError = 0
+        case badSQLConnection = 1
+        case sqlUpdateFailed = 2
+    }
+    
     // MARK: - Properties
     
-    private static var rootURL = "http://159.203.67.188:8080/Dev"
+    private static let rootURL = "http://159.203.67.188:8080/Dev"
+    private static let basicErrorMessage = "Something went wrong, please try again later."
     
     // MARK: - Functions
     
@@ -95,7 +104,7 @@ class Backend: NSObject {
                     }
                 }
             case .failure:
-                completion?("Something went wrong. Please try again later.")
+                completion?(basicErrorMessage)
             }
         }
     }
@@ -131,6 +140,40 @@ class Backend: NSObject {
                 completion(formList)
             case .failure:
                 completion(nil)
+            }
+        }
+    }
+    
+    static func updateUser(fieldToChange field: String, withNewValue value: String, completion: @escaping (_ error: String?) -> Void) {
+        let parameters: Parameters = [
+            "Id": User.currentUser.id,
+            "FieldToChange": field,
+            "NewValue": value
+        ]
+        Alamofire.request("\(rootURL)/UpdateUser?", method: .post, parameters: parameters).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let data = JSON(value)
+                let errorCode = ServerError(rawValue: data["ErrorCode"].intValue)
+                if let errorCode = errorCode {
+                    switch errorCode {
+                    case .noError:
+                        // success
+                        if data["ChangedField"].stringValue == "Email" {
+                            User.currentUser.email = data["NewValue"].stringValue
+                        }
+                        saveUserLocal()
+                        completion(nil)
+                    case .badSQLConnection:
+                        completion("Unable to connect to database. Please try again later.")
+                    case .sqlUpdateFailed:
+                        completion("Unable to update information right now. Please try again later.")
+                    }
+                } else {
+                    completion(basicErrorMessage)
+                }
+            case .failure:
+                completion(basicErrorMessage)
             }
         }
     }
