@@ -22,8 +22,9 @@ class Backend: NSObject {
     
     // MARK: - Properties
     
+    static let basicErrorMessage = "Something went wrong, please try again later."
+    
     private static let rootURL = "http://159.203.67.188:8080/Dev"
-    private static let basicErrorMessage = "Something went wrong, please try again later."
     
     // MARK: - Functions
     

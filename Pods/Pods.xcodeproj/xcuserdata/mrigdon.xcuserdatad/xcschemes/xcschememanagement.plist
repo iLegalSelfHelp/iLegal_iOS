@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ilegal.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,6 +42,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>2BBCA4DE0D8EF02151CA186E61FE9A28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>590CE262B46200C55C4E9F8A68F66757</key>
 		<dict>
 			<key>primary</key>
@@ -47,12 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9A5D1EDF70C292123C2D900332165159</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ED693FFC6DD62BE5C07E0346E58D8EE4</key>
+		<key>987040DA26420ADD7DDC54B68FF23044</key>
 		<dict>
 			<key>primary</key>
 			<true/>

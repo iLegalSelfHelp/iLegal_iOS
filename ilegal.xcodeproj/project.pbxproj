@@ -28,7 +28,9 @@
 		62B554D71E4AD2550037C41D /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B554D61E4AD2550037C41D /* CategoryCell.swift */; };
 		62B554D91E4ADBB40037C41D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B554D81E4ADBB40037C41D /* AccountViewController.swift */; };
 		62B554DB1E4ADD880037C41D /* UserPropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B554DA1E4ADD880037C41D /* UserPropertyCell.swift */; };
-		62C2C5AC1E53A17D00D88103 /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C2C5AB1E53A17D00D88103 /* UpdateUserViewController.swift */; };
+		62C2C5AC1E53A17D00D88103 /* UpdateUserViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C2C5AB1E53A17D00D88103 /* UpdateUserViewController2.swift */; };
+		62E9B6171E53CCA600C63E76 /* UpdateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9B6161E53CCA600C63E76 /* UpdateUserViewController.swift */; };
+		62E9B6191E53CD1C00C63E76 /* ValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9B6181E53CD1C00C63E76 /* ValueCell.swift */; };
 		B70EDC461DC54A62001A7D47 /* DropdownPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70EDC451DC54A62001A7D47 /* DropdownPickerView.swift */; };
 		B786A39D1DB4082300CD6DC7 /* SavedFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786A39C1DB4082300CD6DC7 /* SavedFilesViewController.swift */; };
 		B786A39F1DB40F4900CD6DC7 /* ViewPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B786A39E1DB40F4900CD6DC7 /* ViewPDFViewController.swift */; };
@@ -87,7 +89,9 @@
 		62B554D61E4AD2550037C41D /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		62B554D81E4ADBB40037C41D /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		62B554DA1E4ADD880037C41D /* UserPropertyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPropertyCell.swift; sourceTree = "<group>"; };
-		62C2C5AB1E53A17D00D88103 /* UpdateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
+		62C2C5AB1E53A17D00D88103 /* UpdateUserViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController2.swift; sourceTree = "<group>"; };
+		62E9B6161E53CCA600C63E76 /* UpdateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserViewController.swift; sourceTree = "<group>"; };
+		62E9B6181E53CD1C00C63E76 /* ValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueCell.swift; sourceTree = "<group>"; };
 		AB2EC77A2ADB8EE755EA0093 /* Pods-ilegal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ilegal.release.xcconfig"; path = "Pods/Target Support Files/Pods-ilegal/Pods-ilegal.release.xcconfig"; sourceTree = "<group>"; };
 		B70EDC451DC54A62001A7D47 /* DropdownPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownPickerView.swift; sourceTree = "<group>"; };
 		B786A39C1DB4082300CD6DC7 /* SavedFilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedFilesViewController.swift; sourceTree = "<group>"; };
@@ -180,9 +184,11 @@
 				56C6B7A81DB7E4A700514D93 /* PDFTextField.swift */,
 				56833AB01D8B8EC400EEF299 /* PreviewPDFViewController.swift */,
 				B786A39C1DB4082300CD6DC7 /* SavedFilesViewController.swift */,
-				62C2C5AB1E53A17D00D88103 /* UpdateUserViewController.swift */,
+				62E9B6161E53CCA600C63E76 /* UpdateUserViewController.swift */,
+				62C2C5AB1E53A17D00D88103 /* UpdateUserViewController2.swift */,
 				56E84FA31D89D11B00E406FC /* User.swift */,
 				62B554DA1E4ADD880037C41D /* UserPropertyCell.swift */,
+				62E9B6181E53CD1C00C63E76 /* ValueCell.swift */,
 				FEE8ECD31D868D7C0005C457 /* ViewController.swift */,
 				B786A39E1DB40F4900CD6DC7 /* ViewPDFViewController.swift */,
 				B7D9EDEB1DB42F75005EEBC6 /* YesNoButton.swift */,
@@ -329,7 +335,8 @@
 			files = (
 				62B554D71E4AD2550037C41D /* CategoryCell.swift in Sources */,
 				56E84FA21D87DA7000E406FC /* ForgotPasswordViewController.swift in Sources */,
-				62C2C5AC1E53A17D00D88103 /* UpdateUserViewController.swift in Sources */,
+				62C2C5AC1E53A17D00D88103 /* UpdateUserViewController2.swift in Sources */,
+				62E9B6171E53CCA600C63E76 /* UpdateUserViewController.swift in Sources */,
 				62B554D91E4ADBB40037C41D /* AccountViewController.swift in Sources */,
 				56C6B7A91DB7E4A700514D93 /* PDFTextField.swift in Sources */,
 				56E84F9A1D87C11700E406FC /* CotinueAccountViewController.swift in Sources */,
@@ -349,6 +356,7 @@
 				56E84FA01D87C1D200E406FC /* CategoriesViewController.swift in Sources */,
 				56833AB11D8B8EC400EEF299 /* PreviewPDFViewController.swift in Sources */,
 				56C6B7AF1DBD7BC400514D93 /* CheckBox.swift in Sources */,
+				62E9B6191E53CD1C00C63E76 /* ValueCell.swift in Sources */,
 				56833AB31D8B955200EEF299 /* DocumentsViewController.swift in Sources */,
 				569AE51B1DC691EA00366376 /* EditPDFViewController.swift in Sources */,
 				56C6B7AD1DBD7BB000514D93 /* CheckBoxGroup.swift in Sources */,

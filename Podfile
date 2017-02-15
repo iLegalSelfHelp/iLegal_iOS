@@ -10,4 +10,5 @@ target 'ilegal' do
     pod 'Alamofire' , '~> 4.0'
     pod 'CryptoSwift'
     pod 'ILPDFKit'
+    pod 'MBProgressHUD'
 end
