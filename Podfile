@@ -11,4 +11,5 @@ target 'ilegal' do
     pod 'CryptoSwift'
     pod 'ILPDFKit'
     pod 'MBProgressHUD'
+    pod 'Walkthrough'
 end

@@ -179,4 +179,25 @@ class Backend: NSObject {
         }
     }
     
+    static func getPDF(withID id: String, completion: @escaping (_ questions: [String]?, _ error: String?) -> Void) {
+        let parameters: Parameters = [
+            "PdfID": id
+        ]
+        Alamofire.request("\(rootURL)/FillPDF?", method: .get, parameters: parameters).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let data = JSON(value)
+                var questions = [String]()
+                for (_, json): (String, JSON) in data["Fields"] {
+                    if json["type"].exists() {
+                        questions.append(json["name"].stringValue)
+                    }
+                }
+                completion(questions, nil)
+            case .failure:
+                completion(nil, basicErrorMessage)
+            }
+        }
+    }
+    
 }

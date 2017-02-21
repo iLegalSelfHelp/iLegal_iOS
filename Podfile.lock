@@ -4,6 +4,7 @@ PODS:
   - ILPDFKit (1.0.5)
   - MBProgressHUD (1.0.0)
   - SwiftyJSON (3.1.0)
+  - Walkthrough (0.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - ILPDFKit
   - MBProgressHUD
   - SwiftyJSON
+  - Walkthrough
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
@@ -18,7 +20,8 @@ SPEC CHECKSUMS:
   ILPDFKit: e208473cc97dd889c1cdf97711816be1ec64f8fe
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
+  Walkthrough: 793c5eb9d0f3dfb606abf14b14890d72e4c221e3
 
-PODFILE CHECKSUM: feef4bc931fedbf358da884aa1cff28ae3abee4b
+PODFILE CHECKSUM: 5bea297b233da00bbe038a4b47d0ffc3957afd5a
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

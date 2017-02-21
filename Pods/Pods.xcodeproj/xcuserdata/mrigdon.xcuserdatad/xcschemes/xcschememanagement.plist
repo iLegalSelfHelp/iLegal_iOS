@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Walkthrough.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -42,7 +47,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2BBCA4DE0D8EF02151CA186E61FE9A28</key>
+		<key>29DD08C6B3BC53FBC2AF9691C3CAD85B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>46523F98C58302B8167EC9F6A9A759BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>590CE262B46200C55C4E9F8A68F66757</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>59FBD6D797103008897D7016532CB7AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>987040DA26420ADD7DDC54B68FF23044</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
