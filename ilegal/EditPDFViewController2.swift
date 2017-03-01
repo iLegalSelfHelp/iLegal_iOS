@@ -16,6 +16,8 @@ class EditPDFViewController2: UIViewController {
     var form: Form!
     var walkthrough: Walkthrough!
     
+    
+    
     // MARK: - Lifecycle methods
 
     override func viewDidLoad() {

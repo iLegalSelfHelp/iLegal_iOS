@@ -21,7 +21,11 @@ class SavedFilesViewController: UITableViewController, UITabBarControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 113.0/255.0, green: 158.0/255.0, blue: 255.0/255.0, alpha:1.0)
+        
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 111.0/255.0, green: 42.0/255.0, blue: 59.0/255.0, alpha:1.0)
+
+        //self.navigationController?.navigationBar.barTintColor = UIColor(red: 113.0/255.0, green: 158.0/255.0, blue: 255.0/255.0, alpha:1.0)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
