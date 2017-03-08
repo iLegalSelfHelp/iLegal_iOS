@@ -71,7 +71,7 @@ class CategoriesViewController2: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCell
     
-        cell.imageView.image = UIImage(named: categoriesList[indexPath.row])
+        cell.imageView.image = UIImage(named: categoriesList[indexPath.row].slug)
         cell.label.text = categoriesList[indexPath.row]
     
         return cell

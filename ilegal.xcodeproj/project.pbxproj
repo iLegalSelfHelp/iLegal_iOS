@@ -24,6 +24,8 @@
 		56E84FA41D89D11B00E406FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E84FA31D89D11B00E406FC /* User.swift */; };
 		6231D2D01E4ABB590009114D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6231D2CF1E4ABB590009114D /* Podfile */; };
 		6231D2D21E4ABCA90009114D /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6231D2D11E4ABCA90009114D /* Backend.swift */; };
+		623388951E6F822A00F0226F /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 623388941E6F822A00F0226F /* Categories.json */; };
+		623388971E6F82AA00F0226F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623388961E6F82AA00F0226F /* Extensions.swift */; };
 		62B554D51E4AD02C0037C41D /* CategoriesViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B554D41E4AD02C0037C41D /* CategoriesViewController2.swift */; };
 		62B554D71E4AD2550037C41D /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B554D61E4AD2550037C41D /* CategoryCell.swift */; };
 		62B554D91E4ADBB40037C41D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B554D81E4ADBB40037C41D /* AccountViewController.swift */; };
@@ -85,6 +87,8 @@
 		56E84FA31D89D11B00E406FC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6231D2CF1E4ABB590009114D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6231D2D11E4ABCA90009114D /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		623388941E6F822A00F0226F /* Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
+		623388961E6F82AA00F0226F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		62B554D41E4AD02C0037C41D /* CategoriesViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController2.swift; sourceTree = "<group>"; };
 		62B554D61E4AD2550037C41D /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		62B554D81E4ADBB40037C41D /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		FEE8ECC51D868D7C0005C457 = {
 			isa = PBXGroup;
 			children = (
+				623388941E6F822A00F0226F /* Categories.json */,
 				6231D2CF1E4ABB590009114D /* Podfile */,
 				FEE8ECD01D868D7C0005C457 /* ilegal */,
 				FEE8ECCF1D868D7C0005C457 /* Products */,
@@ -195,6 +200,7 @@
 				FEE8ECD81D868D7C0005C457 /* Assets.xcassets */,
 				FEE8ECDA1D868D7C0005C457 /* LaunchScreen.storyboard */,
 				FEE8ECD51D868D7C0005C457 /* Main.storyboard */,
+				623388961E6F82AA00F0226F /* Extensions.swift */,
 			);
 			path = ilegal;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				56833AAF1D8A3A2B00EEF299 /* SmallClaims.pdf in Resources */,
 				FEE8ECD91D868D7C0005C457 /* Assets.xcassets in Resources */,
 				FEE8ECD71D868D7C0005C457 /* Main.storyboard in Resources */,
+				623388951E6F822A00F0226F /* Categories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +347,7 @@
 				62B61C581E5BFC0F00E22C07 /* EditPDFViewController2.swift in Sources */,
 				56C6B7A91DB7E4A700514D93 /* PDFTextField.swift in Sources */,
 				56E84F9A1D87C11700E406FC /* CotinueAccountViewController.swift in Sources */,
+				623388971E6F82AA00F0226F /* Extensions.swift in Sources */,
 				56E84F981D87BF7500E406FC /* CreateAccountViewController.swift in Sources */,
 				FEE8ECD41D868D7C0005C457 /* ViewController.swift in Sources */,
 				6231D2D21E4ABCA90009114D /* Backend.swift in Sources */,
