@@ -135,7 +135,7 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laskyline" id="joo-6O-HKn">
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="joo-6O-HKn">
                             <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -1130,7 +1130,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2a-77-zY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2431" y="567"/>
+            <point key="canvasLocation" x="2446" y="565"/>
         </scene>
         <!--Saved Files-->
         <scene sceneID="htr-6o-DaB">
@@ -1237,7 +1237,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="up3-2g-EZl" kind="show" identifier="fillOutSegue" id="arf-sv-AJO"/>
+                                    <segue destination="Bzn-y0-PG5" kind="show" identifier="fillOutSegue" id="hUA-yM-iZB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1255,7 +1255,6 @@
                     <connections>
                         <outlet property="fillOutButton" destination="O8i-Ki-Hti" id="jj5-mU-6Fv"/>
                         <outlet property="pdfWebView" destination="Vhr-W9-ata" id="du7-b7-Q0K"/>
-                        <segue destination="Bzn-y0-PG5" kind="show" id="A8Q-W1-x5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSs-UM-ZtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1311,7 +1310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AaQ-3l-rpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3894" y="583"/>
+            <point key="canvasLocation" x="3894" y="-160"/>
         </scene>
         <!--DonePDF View Controller-->
         <scene sceneID="kvq-fy-eNK">
