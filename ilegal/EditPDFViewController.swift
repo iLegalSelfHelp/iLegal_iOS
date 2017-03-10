@@ -91,10 +91,11 @@ class EditPDFViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         //Load json file in path
         
             var yAxis = -40;
-            Alamofire.request("http://159.203.67.188:8080/Dev/FillPDF?PdfID=" + (currentForm?.id)!).responseJSON { response in
+            Alamofire.request("http://159.203.67.188:8080/Dev/FillPDF?PdfID=\(currentForm!.id!)").responseJSON { response in
                 switch response.result {
                 case .success(let value):
                     self.json = JSON(value)
+                    print(self.json)
                     let fields = self.json["Fields"]
                     for (key,subJson):(String, JSON) in fields {
                         if(subJson["type"].exists()){
