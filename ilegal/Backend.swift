@@ -134,6 +134,7 @@ class Backend: NSObject {
                     tempPDF.id = current[2]
                     formList.append(tempPDF)
                 }
+                formList.sort { $0.title < $1.title }
                 completion(formList)
             case .failure:
                 completion(nil)
