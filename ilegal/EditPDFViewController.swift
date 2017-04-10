@@ -58,6 +58,8 @@ class EditPDFViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             switch response.result{
             case .success(let value):
             let outcome = JSON(value)
+            print("here matt")
+            print(outcome)
             if(outcome["Success"].boolValue == true){
                 let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
                 let destination = storyboard.instantiateViewController(withIdentifier: "DonePDFViewController") as! DonePDFViewController
@@ -75,7 +77,6 @@ class EditPDFViewController: UIViewController, UIPickerViewDataSource, UIPickerV
                 self.present(alertController, animated:true, completion:nil)
             }
             case .failure(let error):
-                print(error)
                 let alertController = UIAlertController(title: "Error", message: "Completed form could not be created. Please try again.", preferredStyle: UIAlertControllerStyle.alert)
                 alertController.addAction(UIAlertAction(title:"Dismiss", style: UIAlertActionStyle.default,handler: nil))
                 self.present(alertController, animated:true, completion:nil)
@@ -95,7 +96,6 @@ class EditPDFViewController: UIViewController, UIPickerViewDataSource, UIPickerV
                 switch response.result {
                 case .success(let value):
                     self.json = JSON(value)
-                    print(self.json)
                     let fields = self.json["Fields"]
                     for (key,subJson):(String, JSON) in fields {
                         if(subJson["type"].exists()){
