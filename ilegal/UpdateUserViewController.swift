@@ -19,9 +19,8 @@ class UpdateUserViewController: UITableViewController {
     
     // MARK: - Properties
     
-    var fieldToChange = ""
-    var oldValue = ""
     var hasConfirmCell = false
+    var userProperty: UserProperty!
     
     private let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
     private var hud = MBProgressHUD()
@@ -31,7 +30,7 @@ class UpdateUserViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Update \(fieldToChange)"
+        title = "Update \(userProperty.displayName)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,7 +52,7 @@ class UpdateUserViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
 
         if indexPath.section == 0 {
-            (cell as! ValueCell).textField.text = oldValue
+            (cell as! ValueCell).textField.text = userProperty.value
         }
 
         return cell
@@ -61,7 +60,7 @@ class UpdateUserViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return fieldToChange
+            return userProperty.displayName
         }
         
         return nil
@@ -72,13 +71,14 @@ class UpdateUserViewController: UITableViewController {
             let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! ValueCell
             hud = MBProgressHUD.showAdded(to: view, animated: true)
             hud.label.text = "Updating info..."
-            Backend.updateUser(fieldToChange: fieldToChange, withNewValue: cell.textField.text ?? "") { error in
+            Backend.updateUser(fieldToChange: userProperty.sqlName, withNewValue: cell.textField.text ?? "") { error in
                 DispatchQueue.main.async {
                     self.hud.hide(animated: true)
                 }
                 if let error = error {
                     self.alert(withType: .error, withError: error)
                 } else {
+                    User.currentUser.saveLocal()
                     self.alert(withType: .success)
                 }
             }
@@ -91,7 +91,7 @@ class UpdateUserViewController: UITableViewController {
         switch type {
         case .success:
             alertController.title = "Success"
-            alertController.message = "You've successfully updated your \(fieldToChange)"
+            alertController.message = "You've successfully updated your \(userProperty.displayName)"
         case .error:
             alertController.title = "Error"
             alertController.message = error ?? Backend.basicErrorMessage

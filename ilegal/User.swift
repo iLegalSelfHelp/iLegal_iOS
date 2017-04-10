@@ -94,6 +94,11 @@ open class User: NSObject {
     
     // MARK: - Methods
     
+    func saveLocal() {
+        UserDefaults.standard.set(dictionaryValue, forKey: "user")
+        UserDefaults.standard.synchronize()
+    }
+    
     func setBirthday(_ month: String, day: String, year: String){
         self.DOB = year + "-" + month + "-" + day
     }

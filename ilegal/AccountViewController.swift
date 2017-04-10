@@ -12,7 +12,7 @@ class AccountViewController: UITableViewController {
     
     // MARK: - Properties
     
-    private var userProperties = [(String, String)]()
+    private var userProperties = [UserProperty]()
     
     // MARK: - Lifecycle methods
 
@@ -52,8 +52,7 @@ class AccountViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
         
         if indexPath.section == 0 {
-            (cell as! UserPropertyCell).keyLabel.text = userProperties[indexPath.row].0
-            (cell as! UserPropertyCell).valueLabel.text = userProperties[indexPath.row].1
+            (cell as! UserPropertyCell).userProperty = userProperties[indexPath.row]
         }
 
         return cell
@@ -66,8 +65,7 @@ class AccountViewController: UITableViewController {
             Backend.clearUserLocal()
         } else if segue.identifier == "updateUserSegue" {
             let indexPath = tableView.indexPathForSelectedRow
-            (segue.destination as! UpdateUserViewController).fieldToChange = userProperties[indexPath!.row].0
-            (segue.destination as! UpdateUserViewController).oldValue = userProperties[indexPath!.row].1
+            (segue.destination as! UpdateUserViewController).userProperty = userProperties[indexPath!.row]
         }
      }
 
@@ -75,10 +73,14 @@ class AccountViewController: UITableViewController {
     
     private func reloadData() {
         userProperties = [
-            ("Name", User.currentUser.fullName),
-            ("Email", User.currentUser.email),
-            ("Address", User.currentUser.addressOne),
-            ("Password", "●●●●●●●●")
+            UserProperty(displayName: "First Name", value: User.currentUser.firstName, sqlName: "FirstName"),
+            UserProperty(displayName: "Last Name", value: User.currentUser.lastName, sqlName: "LastName"),
+            UserProperty(displayName: "Email", value: User.currentUser.email, sqlName: "Email"),
+            UserProperty(displayName: "Driver's License", value: User.currentUser.license, sqlName: "DLNumber"),
+            UserProperty(displayName: "Address", value: User.currentUser.addressOne, sqlName: "Address1"),
+            UserProperty(displayName: "City", value: User.currentUser.city, sqlName: "City"),
+            UserProperty(displayName: "State", value: User.currentUser.state, sqlName: "State"),
+            UserProperty(displayName: "Zip", value: User.currentUser.zipcode, sqlName: "ZipCode"),
         ]
         DispatchQueue.main.async {
             self.tableView.reloadData()

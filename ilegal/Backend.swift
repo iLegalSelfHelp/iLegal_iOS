@@ -157,8 +157,23 @@ class Backend: NSObject {
                     switch errorCode {
                     case .noError:
                         // success
-                        if data["ChangedField"].stringValue == "Email" {
+                        let changedField = data["ChangedField"].stringValue
+                        if changedField == "Email" {
                             User.currentUser.email = data["NewValue"].stringValue
+                        } else if changedField == "FirstName" {
+                            User.currentUser.firstName = data["NewValue"].stringValue
+                        } else if changedField == "MiddleName" {
+                            User.currentUser.middleInitial = data["NewValue"].stringValue
+                        } else if changedField == "LastName" {
+                            User.currentUser.lastName = data["NewValue"].stringValue
+                        } else if changedField == "Address1" {
+                            User.currentUser.addressOne = data["NewValue"].stringValue
+                        } else if changedField == "City" {
+                            User.currentUser.city = data["NewValue"].stringValue
+                        } else if changedField == "State" {
+                            User.currentUser.state = data["NewValue"].stringValue
+                        } else if changedField == "ZipCode" {
+                            User.currentUser.zipcode = data["NewValue"].stringValue
                         }
                         saveUserLocal()
                         completion(nil)
