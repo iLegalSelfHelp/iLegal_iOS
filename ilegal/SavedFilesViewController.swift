@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class SavedFilesViewController: UITableViewController, UITabBarControllerDelegate{
     
+    let dateEndIndex = 19
+    
     var filteredSavedFiles = [Form]()
     var deleteFileIndex:IndexPath? = nil
     var deleteFile:Form? = nil
@@ -63,7 +65,11 @@ class SavedFilesViewController: UITableViewController, UITabBarControllerDelegat
             form = User.currentUser.myFiles[indexPath.row]
         }
         cell.textLabel?.text = form.title
-        cell.detailTextLabel?.text = form.subtitle
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = dateFormatter.date(from: form.subtitle.substring(to: dateEndIndex))
+        dateFormatter.dateStyle = .short
+        cell.detailTextLabel?.text = dateFormatter.string(from: date!)
         return cell
     }
     
