@@ -276,19 +276,19 @@ class CotinueAccountViewController: UIViewController, UIPickerViewDataSource, UI
         }
         else
         {
-            User.currentUser.addressOne = String(describing: addressOneTF.text?.utf8)
+            User.currentUser.addressOne = addressOneTF.text
             if(addressTwoTF.text!.characters.count > 0){
-                User.currentUser.addressTwo = String(describing: addressTwoTF.text?.utf8)
+                User.currentUser.addressTwo = addressTwoTF.text
             }
             
             
-            User.currentUser.city =  cityTF.text?.utf8.description
-            User.currentUser.state = stateTF.text?.utf8.description
-            User.currentUser.zipcode = zipcodeTF.text?.utf8.description
-            User.currentUser.phone = phoneTF.text?.utf8.description
-            User.currentUser.license = licenseTF.text?.utf8.description
+            User.currentUser.city =  cityTF.text
+            User.currentUser.state = stateTF.text
+            User.currentUser.zipcode = zipcodeTF.text
+            User.currentUser.phone = phoneTF.text
+            User.currentUser.license = licenseTF.text
             User.currentUser.setBirthday(birthdayMTF.text!, day: birthdayDTF.text!, year: birthdayYTF.text!)
-            User.currentUser.DOB = User.currentUser.DOB?.utf8.description
+            User.currentUser.DOB = User.currentUser.DOB
             
             
             var parameters: Parameters = [
@@ -306,11 +306,11 @@ class CotinueAccountViewController: UIViewController, UIPickerViewDataSource, UI
             ]
             
             if(!addressTwoTF.text!.isEmpty){
-                parameters["Address2"] = User.currentUser.addressTwo?.utf8.description
+                parameters["Address2"] = User.currentUser.addressTwo
             }
             
             if(User.currentUser.middleInitial!.characters.count > 0){
-                parameters["MiddleName"] = User.currentUser.middleInitial?.utf8.description
+                parameters["MiddleName"] = User.currentUser.middleInitial
             }
             
             Alamofire.request("http://159.203.67.188:8080/Dev/SignUp?", method: .post, parameters: parameters).responseJSON { response in

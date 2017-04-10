@@ -40,7 +40,7 @@ class AccountViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +48,7 @@ class AccountViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let reuseID = indexPath.section == 0 ? "userPropertyCell" : indexPath.section == 1 ? "contactUsCell" : "logoutCell"
+        let reuseID = indexPath.section == 0 ? "userPropertyCell" : "logoutCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
         
         if indexPath.section == 0 {

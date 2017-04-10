@@ -180,13 +180,13 @@ class CreateAccountViewController: UIViewController, UITextFieldDelegate {
         else
         {
             User.currentUser.active = true
-            User.currentUser.firstName = firstNameTF.text?.utf8.description
+            User.currentUser.firstName = firstNameTF.text
             if(middleInitialTF.text!.characters.count > 0){
-                User.currentUser.middleInitial = middleInitialTF.text?.utf8.description
+                User.currentUser.middleInitial = middleInitialTF.text
             }
-            User.currentUser.lastName = lastNameTF.text?.utf8.description
-            User.currentUser.email = emailTF.text?.utf8.description
-            User.currentUser.password = passwordTF.text?.sha1().utf8.description
+            User.currentUser.lastName = lastNameTF.text
+            User.currentUser.email = emailTF.text
+            User.currentUser.password = passwordTF.text?.sha1()
             
             performSegue(withIdentifier: "continueSegue", sender: self)
         }
