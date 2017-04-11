@@ -22,6 +22,11 @@ class AccountViewController: UITableViewController {
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 111.0/255.0, green: 42.0/255.0, blue: 59.0/255.0, alpha:1.0)
         
+        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background2.png"));
+    
+        
+        
         //self.navigationController?.navigationBar.barTintColor = UIColor(red: 113.0/255.0, green: 158.0/255.0, blue: 255.0/255.0, alpha:1.0)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
@@ -51,12 +56,17 @@ class AccountViewController: UITableViewController {
         let reuseID = indexPath.section == 0 ? "userPropertyCell" : "logoutCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
         
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.4);
+
+        
         if indexPath.section == 0 {
             (cell as! UserPropertyCell).userProperty = userProperties[indexPath.row]
         }
 
         return cell
     }
+    
+    
     
      // MARK: - Navigation
     
